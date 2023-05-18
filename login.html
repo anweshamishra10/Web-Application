@@ -1,0 +1,13 @@
+<!-- login.html -->
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<form method="post" class="login-container">
+  {% csrf_token %}
+  <input type="email" name="email" placeholder="Email ID" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button type="submit" class="login-button">Login</button>
+  <a href="{% url 'create_account' %}" class="signup-link">Create Account</a>
+</form>

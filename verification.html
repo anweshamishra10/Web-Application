@@ -1,0 +1,34 @@
+<!-- verification.html -->
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+      <div class="otp-container">
+          <h1 class="otp-title">OTP Verification</h1>
+          <p class="otp-message">Your OTP for verification is:</p>
+          <p class="otp-code">{{ otp }}</p>
+          <p class="otp-instructions">Please enter this OTP in the verification form to complete your registration.</p>
+          <p class="otp-footer">This is an automated email. Please do not reply.</p>
+      </div>
+  </div>
+</body>
+
+<form method="post">
+ 
+    {% csrf_token %}
+    <input type="number" name="otp" placeholder="OTP" required>
+    <button type="submit">Submit</button>
+    
+      <p id="timer">60 seconds</p>
+      <a href="{% url 'verification' %}">Resend</a>
+</form>
+<script>
+      // Countdown timer implementation
+      var timer = 60;
+      setInterval(function () {
+        timer--;
+        document.getElementById("timer").innerText = timer + " seconds";
+      }, 1000);
+</script>

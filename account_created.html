@@ -1,0 +1,15 @@
+<!-- account_created.html -->
+{% load static %}
+<head>
+    <title>Account Created</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="account-created-message">
+        <h1>Account Created</h1>
+        <p>Congratulations! Your account has been successfully created.</p>
+        <button>Login Now</button>
+    </div>
+</body>
+<p>Your account has been created.</p>
+<a href="{% url 'login' %}">Login Now</a>
