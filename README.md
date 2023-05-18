@@ -38,3 +38,10 @@ Screen 4. Account Created
 
 User gets a prompt message than account has been created. User then clicks on “Login Now” 
 button to get redirected to Screen 1.
+
+**NOTE**
+
+The _init_.py, admins.py, apps.py, forms.py, models.py, tests.py and views.py should be in a folder named "authentication".
+The _init_.py, asgi.py, settings.py, urls.py and wsgi.py should be in a folder named "web_app".
+The style.css file should be inside a folder named "static", which is inside the authentication folder.
+The html files should be inside a folder named "templates", which is inside the authentication folder.
