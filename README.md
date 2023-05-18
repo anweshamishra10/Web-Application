@@ -45,3 +45,8 @@ The _init_.py, admins.py, apps.py, forms.py, models.py, tests.py and views.py sh
 The _init_.py, asgi.py, settings.py, urls.py and wsgi.py should be in a folder named "web_app".
 The style.css file should be inside a folder named "static", which is inside the authentication folder.
 The html files should be inside a folder named "templates", which is inside the authentication folder.
+
+
+**TO RUN THE CODE, JUST OPEN THE CMD PROMPT FROM THE WEB_APP FOLDER CONTAINING ALL THE ABOVE FILES AND FOLDERS AND WRITE THIS COMMAND:**
+
+python manage.py runserver
